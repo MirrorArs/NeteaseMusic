@@ -97,6 +97,7 @@ section>h2:first-child{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: black;
 }
 
 

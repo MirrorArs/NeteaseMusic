@@ -35,7 +35,7 @@ $(function(){
         $('.tabContent > li').eq(index).addClass('active')
             .siblings().removeClass('active')
     })
-        $('.siteNav').on('tabChange',function(e,index){
+    $('.siteNav').on('tabChange',function(e,index){
         let $li = $('.tabContent > li').eq(index)
         if($li.attr('data-downloaded') === 'yes'){
             return
@@ -80,7 +80,7 @@ $(function(){
                     `)
                     $('#output').append($li)
                     $li.attr('data-downloaded', 'yes')
-                    })
+                })
             })
         }
     })
@@ -157,4 +157,11 @@ $(function(){
     }
     window.search = search
 
+    $('.playlists').on('click','li',function(e){
+            $('.siteNav>ol>li').eq(0).removeClass('active')
+            $('.siteNav>ol>li').eq(1).addClass('active')
+            $('.tabContent>li').eq(0).removeClass('active')
+            $('.tabContent>li').eq(1).addClass('active')
+    })
 })
+
